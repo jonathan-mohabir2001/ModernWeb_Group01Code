@@ -52,6 +52,11 @@ app.get('/addBlog', (req, res) => {
   res.render('addBlog.pug')
 })
 
+//NEW ADD 
+app.get('/world',(req, res)=>{
+  res.send('hello hello ')
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT} press ctrl+c to end`)
