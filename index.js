@@ -6,8 +6,6 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT ||8000; 
 // Express imported, app set, port set. 
-
-
 const fs = require('fs')
 const path = require("path"); 
 // path and filesystem imported
@@ -37,6 +35,20 @@ app.set('/', path.join(__dirname ,'views'))
 app.set('view engine', 'pug')
 // view engine set to view pug files. 
 
+app.get('/', (req,res) => {
+  res.render('home.pug')
+})
+
+app.get('/signup', (req, res) => {
+  res.render('signUp.pug')
+})
+
+app.get('/login', (req, res) => {
+  res.render('login.pug')
+})
+app.get('/addBlog', (req, res) => {
+  res.render('addBlog.pug')
+})
 
 
 app.listen(PORT, () => {
