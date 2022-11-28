@@ -1,6 +1,6 @@
 /*
 BlogPost Application created by Group -01
-
+//jason wuz here
 */
 const express = require('express')
 const app = express()
@@ -35,6 +35,7 @@ app.set('/', path.join(__dirname ,'views'))
 app.set('view engine', 'pug')
 // view engine set to view pug files. 
 
+var jason
 app.get('/', (req,res) => {
   res.render('home.pug')
 })
