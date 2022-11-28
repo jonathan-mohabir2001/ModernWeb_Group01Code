@@ -47,6 +47,7 @@ app.get('/login', (req, res) => {
   res.render('login.pug')
 })
 app.get('/addBlog', (req, res) => {
+  console.log("Liam")
   res.render('addBlog.pug')
 })
 
