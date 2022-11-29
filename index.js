@@ -7,8 +7,6 @@ const fs = require('fs')
 // path and file system modules imported. 
 
 
-//jason wuz here 
-
 
 app.get('/', (req, res )=>{
   res.send('hello')
