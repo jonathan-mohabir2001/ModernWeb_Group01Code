@@ -10,7 +10,9 @@ const fs = require('fs')
 //jason wuz here 
 
 
-
+app.get('/', (req, res )=>{
+  res.send('hello')
+})
 
 
 
