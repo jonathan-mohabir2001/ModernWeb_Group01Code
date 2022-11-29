@@ -61,6 +61,10 @@ app.get('/world',(req, res)=>{
 
 // hello hello new line added. 
 
+function greeting(){
+  return("hello world ")
+}
+
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT} press ctrl+c to end`)
