@@ -11,9 +11,14 @@ const fs = require('fs')
 
 
 
+
+
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 // this sets our app to be able to render any pug files we need to make 
+
+
+
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}, press ctrl+c to end`)
 })
