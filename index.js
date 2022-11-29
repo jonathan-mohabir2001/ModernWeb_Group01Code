@@ -1,6 +1,6 @@
 /*
 BlogPost Application created by Group -01
-//jason wuz here
+
 */
 const express = require('express')
 const app = express()
@@ -16,14 +16,14 @@ const db = mongoose.connection;
 
 mongoose.connect("mongodb://localhost/blogpost")
 // connection string set. 
+// atlas will be used instead of our local host for mongodb 
+
 
 db.once("open", function(){
   console.log("Succesful connection to MongoDB")
 })
 
-// a new line to add ! 
 
-// function here logs a connection message for successful connection 
 db.on("error", function(error){
   console.log("We have an erorr")
 })
@@ -37,7 +37,7 @@ app.set('/', path.join(__dirname ,'views'))
 app.set('view engine', 'pug')
 // view engine set to view pug files. 
 
-var jason
+
 app.get('/', (req,res) => {
   res.render('home.pug')
 })
@@ -49,22 +49,6 @@ app.get('/signup', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login.pug')
 })
-app.get('/addBlog', (req, res) => {
-  console.log("Liam")
-  res.render('addBlog.pug')
-})
-
-//NEW ADD 
-app.get('/world',(req, res)=>{
-  res.send('hello hello ')
-})
-
-// hello hello new line added. 
-
-function greeting(){
-  return("hello world ")
-}
-
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT} press ctrl+c to end`)
