@@ -21,6 +21,8 @@ db.once("open", function(){
   console.log("Succesful connection to MongoDB")
 })
 
+// a new line to add ! 
+
 // function here logs a connection message for successful connection 
 db.on("error", function(error){
   console.log("We have an erorr")
