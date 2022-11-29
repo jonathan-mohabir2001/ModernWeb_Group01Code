@@ -1,6 +1,6 @@
 /*
 BlogPost Application created by Group -01
-
+//jason wuz here
 */
 const express = require('express')
 const app = express()
@@ -37,6 +37,7 @@ app.set('/', path.join(__dirname ,'views'))
 app.set('view engine', 'pug')
 // view engine set to view pug files. 
 
+var jason
 app.get('/', (req,res) => {
   res.render('home.pug')
 })
@@ -49,8 +50,16 @@ app.get('/login', (req, res) => {
   res.render('login.pug')
 })
 app.get('/addBlog', (req, res) => {
+  console.log("Liam")
   res.render('addBlog.pug')
 })
+
+//NEW ADD 
+app.get('/world',(req, res)=>{
+  res.send('hello hello ')
+})
+
+// hello hello new line added. 
 
 
 app.listen(PORT, () => {
