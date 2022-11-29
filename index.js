@@ -1,3 +1,8 @@
+/*
+
+Find the routing section under the handlers directory/index.js
+*/
+
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 8000; 
