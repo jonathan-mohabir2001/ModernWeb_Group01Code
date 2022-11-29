@@ -13,10 +13,11 @@ app.get('/', (req, res )=>{
 })
 
 
-
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 // this sets our app to be able to render any pug files we need to make 
+
+
 
 
 
