@@ -1,30 +1,30 @@
+/*
+
+Find the routing section under the handlers directory/index.js
+*/
+
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 8000; 
-// default port set to 8000, app set, express imported. 
-const path = require('path')
+// our express is imported, app is set, and port is set. 
 const fs = require('fs')
-// path and file system modules imported. 
+const path = require('path')
+
+const routes = require('./handlers/handlers')
+// routes contant responsible for routing. 
+// /handlers/handlers.js
+app.get('/', routes.home)
+app.get('/signup', routes.signUp)
+app.get('/login',routes.login)
+app.get('/addblog', routes.addBlog)
+// four routes to render our 4 pug pages. 
 
 
-// helllo ooos
 
-
-//new new new new 
-
-app.get('/', (req, res )=>{
-  res.send('hello')
-})
-
-
-
-app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
-// this sets our app to be able to render any pug files we need to make 
-
-
+// setting the view engine to pug. Allows for rendering of pug files. 
 
 app.listen(PORT, () => {
-  console.log(`Server started on ${PORT}, press ctrl+c to end`)
+  console.log(`Server started press on port ${PORT}  press ctrl +c to end.`)
 })
-// listener statement. 
+
