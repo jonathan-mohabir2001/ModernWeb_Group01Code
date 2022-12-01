@@ -8,7 +8,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//THIS IS ROUTES
+//Original ROUTES
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //END OF ROUTES 
