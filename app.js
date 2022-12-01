@@ -13,6 +13,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //END OF ROUTES 
 
+const value = "this"; 
+
 const app = express();
 // Required moduels imported above. 
 
