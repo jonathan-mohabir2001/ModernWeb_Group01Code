@@ -28,8 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //START OF ROUTES. 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/home', indexRouter);
+app.use('/signIn', indexRouter); 
+app.use('/signUp', indexRouter); 
+app.use('/addBlog', indexRouter); 
 // END OF ROUTES.
 
 
