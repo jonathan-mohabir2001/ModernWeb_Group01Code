@@ -14,8 +14,6 @@ var usersRouter = require('./routes/users');
 //END OF ROUTES 
 
 
-
-// SUP NIGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 // hello
 
 const app = express();
