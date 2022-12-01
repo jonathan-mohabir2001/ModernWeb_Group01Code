@@ -7,8 +7,12 @@ var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+//ROUTES 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+//END OF ROUTES 
+
 const app = express();
 // Required moduels imported above. 
 
@@ -25,6 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/home', indexRouter);
+
+
 
 
 
