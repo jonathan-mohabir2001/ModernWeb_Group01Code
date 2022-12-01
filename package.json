@@ -1,18 +1,16 @@
 {
-  "name": "group_project",
-  "version": "1.0.0",
-  "description": "This node.js project is the main code base for Group 01s project. An express application using templating engine pug for creating the front end. MongoDB used for storing data. ",
-  "main": "index.js",
+  "name": "group-project",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon index/js"
+    "start": "node ./bin/www"
   },
-  "author": "Group01 - Jonathan.M, Jason.T, Jason.N, Basilal.D, Lam.H",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^6.7.4",
-    "nodemon": "^2.0.20",
-    "pug": "^3.0.2"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
   }
 }
