@@ -1,6 +1,5 @@
 /*
 Group 01 codebase. 
-
 */
 const express = require('express');
 var createError = require('http-errors');
@@ -8,31 +7,34 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//Original ROUTES
+//START OF ROUTES 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //END OF ROUTES 
 
 
-// hello
-
 const app = express();
-// Required moduels imported above. 
+ 
 
+//START OF VIEW ENGINE SETUP
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-// setting of view engine to allow pug files to render.
+//END OF VIEW ENGINE SETUP
+
+//START OF MIDDLE WARE 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// middleware set above. 
+//END OF MIDDLE WARE
 
-
+//START OF ROUTES. 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', indexRouter);
+// END OF ROUTES.
+
 
 
 
@@ -52,5 +54,4 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 module.exports = app;
