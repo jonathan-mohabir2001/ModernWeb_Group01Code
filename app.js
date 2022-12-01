@@ -10,12 +10,9 @@ var logger = require('morgan');
 //START OF ROUTES 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-//END OF ROUTES 
-
-
+//END OF ROUTES
 const app = express();
  
-
 //START OF VIEW ENGINE SETUP
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
