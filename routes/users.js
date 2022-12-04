@@ -23,7 +23,7 @@ router.route('/signUp').get((req, res, next)=>{
     newUser.name = req.body.name;
     newUser.email = req.body.email;
     newUser.username = req.body.username;
-    bcryptjs.genSalt(10, (error, salt) => {
+    bcryptjs.genSalt(15, (error, salt) => {
       bcryptjs.hash(req.body.password, salt, (error, passwordHash) =>{
         if (error){
           console.log(JSON.stringify(error));
