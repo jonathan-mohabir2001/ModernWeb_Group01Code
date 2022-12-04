@@ -2,14 +2,37 @@ extends layout
 
 block content 
 
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Sign Up below 
+  html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title Sign Up below 
 
 
-  body 
+    body 
 
-    h1 Sign up using the form! 
+      h1 Sign up using the form! 
+
+      if errors
+        each error in errors
+          p(style="color:red") #{error.msg}
+
+      form(method="POST", action="/signUp")
+        #form-group-name.form-group
+          label(for="name") Name: 
+          input#name.input-control(name="name", type="text")
+        #form-group-email.form-group
+          label(for="email") Email: 
+          input#email.input-control(name="email", type="text")
+        #form-group-username.form-group
+          label(for="ysername") Username: 
+          input#username.input-control(name="username", type="text")
+        #form-group-password.form-group
+          label(for="password") Password: 
+          input#password.input-control(name="password", type="password")
+        #form-group-passwordConfirm.form-group
+          label(for="passwordConfirm") Password Confirm: 
+          input#passwordConfirm.input-control(name="passwordConfirm", type="password")
+        #form-group-submit.form-group
+          input.btn.btn-primary.input-control(type="submit")
