@@ -17,6 +17,9 @@ block content
       if errors
         each error in errors
           p(style="color:red") #{error.msg}
+      
+      if DBerror
+        p(style="color:red")  #{DBerror.errors.username.properties.message}
 
       form(method="POST", action="/signUp")
         #form-group-name.form-group

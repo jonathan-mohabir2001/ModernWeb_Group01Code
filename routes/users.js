@@ -27,12 +27,14 @@ router.route('/signUp').get((req, res, next)=>{
       bcryptjs.hash(req.body.password, salt, (error, passwordHash) =>{
         if (error){
           console.log(JSON.stringify(error));
+          
         }
         else{
           newUser.password = passwordHash
           newUser.save((error) =>{
             if(error){
               console.log(JSON.stringify(error));
+              res.render('signUp', {DBerror: error})
             }
             else{
               res.redirect("/signIn")
@@ -58,7 +60,7 @@ router.route('/SignIn').get((req, res, next) =>{
   if (errors.isEmpty()){
     passport.authenticate("local", {
       successRedirect: "/",
-      failureRedirect: "/user/login",
+      failureRedirect: "/signIn",
       failureMessage: true
     })(req, res, next);
   }
