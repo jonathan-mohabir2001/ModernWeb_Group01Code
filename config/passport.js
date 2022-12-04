@@ -3,35 +3,42 @@ const User = require("../schemas/users");
 const bcryptjs = require('bcryptjs');
 const passport = require('passport');
 
-module.exports = (passport) =>{
-    passport.use(new localStrategy({usernameField: "email"}, (email, password, done) =>{
-        User.findOne({email:email}, (error, user) => {
-            bcryptjs.compare(password, user.password, (error, success)=>{
-                if(error){
-                    console.log(JSON.stringify(error))
-                }
-                else{
-                    if (success){
-                        done(null, user);
+module.exports = (passport) => {
+    passport.use(new localStrategy({ usernameField: "email" }, (email, password, done) => {
+        User.findOne({ email: email }, (error, user) => {
+            if (user != null) {
+                bcryptjs.compare(password, user.password, (error, success) => {
+                    if (error) {
+                        console.log(JSON.stringify(error))
+
                     }
-                    else{
-                        done(null, false, {message: "User not found"});
+                    else {
+                        if (success) {
+                            done(null, user);
+                        }
+                        else {
+                            console.log("Wrong Password")
+                            done(null, false, { message: "Password is Wrong" });
+                        }
                     }
-                }
-            })
+                })
+            }
+            else{
+                done(null, false, { message: "User Not Found" });
+            }
         })
     }))
 }
 
-passport.serializeUser((user, done)=>{
+passport.serializeUser((user, done) => {
     done(null, user.id);
 })
-passport.deserializeUser((id, done) =>{
-    User.findById(id,(error, user) =>{
-        if(error){
+passport.deserializeUser((id, done) => {
+    User.findById(id, (error, user) => {
+        if (error) {
             console.log("Had problem finding the user by Id:" + id)
         }
-        else{
+        else {
             done(null, user)
         }
     })
