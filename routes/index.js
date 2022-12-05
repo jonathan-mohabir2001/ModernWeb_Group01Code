@@ -5,8 +5,6 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 
   res.render('home', { title:'We are at the home.'})
-
-
 });
 
 
