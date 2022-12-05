@@ -4,11 +4,50 @@
     margin-top: 0.5rem;
     border-radius: 1rem;
 }
-
 #welcome-para1{
-    
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#welcome-para2{
+  font-size: 1.5rem;
+  font-weight: 350;
+  text-align: ;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#welcome-para3{
+  font-size: 1.5rem;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
+#first-para{
+    font-size: 1.5rem;
+    font-weight: 540;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#developer-para1{
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#developer-para2{
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
 .card-title{
     text-align: center;
