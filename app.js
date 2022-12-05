@@ -31,6 +31,8 @@ app.set('view engine', 'pug');
 //END OF VIEW ENGINE SETUP
 
 //START OF MIDDLE WARE 
+  
+  app.use(express.static(path.join(__dirname, 'public')));
 
   //Session setup
   app.use(session({
@@ -50,7 +52,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 //END OF MIDDLE WARE
 

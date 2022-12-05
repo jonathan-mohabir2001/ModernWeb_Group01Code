@@ -1,24 +1,30 @@
+extends layout  
 
 
+block content 
 
-
-
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title HumberBlogger
-
+  html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title HumberBlogger 
+ 
+    // watch indentations 
   
-  
-  body 
+    body 
 
-    h1 Welcome to the humber blogger application. 
-
-      div
-        h3 Hello there! In this app you can create a blogpost. 
-
-
+      div.card#welcome-div
+        div.card-header   
+          h2.card-title#main-title Welcome to Humber-Blogger 
+        
+        div.card-title 
+          h5 Authors: Jonathan.M, Jason.N, Jason.T, Quang Lam.H, Basilial.D 
+      
+      div.card-body
+        h5.card-title Follow Below 
+        
+        p.card-text#first-para You will be able to add a blog post, but first you must create an account. You can first do that below, click on the link provided below to do that. 
+        
 
         
