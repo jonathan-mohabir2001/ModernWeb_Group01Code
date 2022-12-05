@@ -16,7 +16,7 @@ block content
 
       if errors
         each error in errors
-          p(style="color:red") #{error.msg}
+          p.alert.alert-danger(style="color:red") #{error.msg}
       
       if DBerror
         p(style="color:red")  #{DBerror.errors.username.properties.message}
@@ -30,6 +30,9 @@ block content
         .form-group-sign-up  
           label(for="email") Email: 
           input.form-control.lg#sign-up-form-group(name="email", type="text", placeholder="Email")
+
+          div
+            error.email.msg
 
         div.form-group-sign-up      
           label(for="username") Username: 
