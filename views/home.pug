@@ -12,7 +12,7 @@ block content
  
     // watch indentations 
   
-    body 
+    body#home-body
 
       div.card#welcome-div
         div.card-header   
@@ -21,10 +21,29 @@ block content
         div.card-title 
           h5 Authors: Jonathan.M, Jason.N, Jason.T, Quang Lam.H, Basilial.D 
       
+
       div.card-body
-        h5.card-title Follow Below 
+        h3.card-title Application Description 
         
-        p.card-text#first-para You will be able to add a blog post, but first you must create an account. You can first do that below, click on the link provided below to do that. 
-        
+        p.card-text#welcome-para1 This app was created using both front-end, and backend technology. 
+        p.card-text#welcome-para2 Front end, is what you as the user are able to see, backend technology is as the name suggests backgrond processes that go on in order to make the app functional! 
+        p.card-text#welcome-para3 Our app allows you to add a blogpost, you can write whatever you feel like talking about, you will also be able to see a list of blogs submitted by other users. Follow the buttons we create to show you how to navigate this site. 
+
+
+        br
+        h5.card-title Info For Developers
+
+        p.card-text Our front end is simply created using the templating engine "pug", our backend is created using the Node.js, and Express JavaScript backend development technologies. Our data is held under a MongoDB Cluster. 
+        br 
+        p.card-text For cloud deployment, we are utiling Vercel, this was our choice as it speeds up the development process by simply importing this github repository. This saves us tremendous time whenever we have updates to our code or design. 
+        a.btn.btn-secondary#git-button(href="https://github.com/jonathan-mohabir2001/ModernWeb_Group01Code") View GitHub Repo for source code!
+
+      br 
+      br 
+      div.card-body
+        h3.card-title Follow Below    
+        p.card-text#first-para Follow the button below to first create your account in order to add your blog! 
+        a.btn.btn-primary#sign-up-button(href="/signUp") Click me to Sign Up 
+
 
         

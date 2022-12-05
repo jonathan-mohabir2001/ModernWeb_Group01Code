@@ -1,3 +1,15 @@
+#home-body{
+    background-color: #E2F6FB;
+    padding: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+}
+
+#welcome-para1{
+    
+}
+
+
 .card-title{
     text-align: center;
     font-size: 2.5rem;
@@ -18,4 +30,30 @@
     text-align: center;
     margin-top: 2rem;
     background-color:skyblue;
+}
+
+
+
+
+#sign-up-button{
+    background-color: skyblue;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+#git-button{
+    background-color: #edf5f7;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 100%;
 }

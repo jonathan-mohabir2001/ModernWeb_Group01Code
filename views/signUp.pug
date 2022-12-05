@@ -1,3 +1,4 @@
+extends layout 
 
 block content 
 
@@ -21,20 +22,25 @@ block content
         p(style="color:red")  #{DBerror.errors.username.properties.message}
 
       form(method="POST", action="/signUp")
-        #form-group-name.form-group
+        .form-group-name
           label(for="name") Name: 
           input#name.input-control(name="name", type="text")
-        #form-group-email.form-group
+
+        .form-group-email
           label(for="email") Email: 
           input#email.input-control(name="email", type="text")
-        #form-group-username.form-group
+
+        .form-group-username
           label(for="ysername") Username: 
           input#username.input-control(name="username", type="text")
-        #form-group-password.form-group
+
+        .form-group-password
           label(for="password") Password: 
           input#password.input-control(name="password", type="password")
-        #form-group-passwordConfirm.form-group
+
+        .form-group-passwordConfirm
           label(for="passwordConfirm") Password Confirm: 
           input#passwordConfirm.input-control(name="passwordConfirm", type="password")
-        #form-group-submit.form-group
+
+        .form-group-submit
           input.btn.btn-primary.input-control(type="submit")
