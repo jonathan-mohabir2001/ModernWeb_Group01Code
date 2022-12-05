@@ -12,9 +12,9 @@ block content
     
     
     body#home-body
-      div.jumbotron
-        h1.display-4 Welcome to blog creator!
-        p.lead Add a blog below.
+      div(style="background-color:skyblue").jumbotron
+        h1.display-4.d-flex.justify-content-center Welcome to blog creator!
+        p.lead.d-flex.justify-content-center Add a blog below.
         hr.my-4
       
         form(method="POST", action="/index/addBlog")

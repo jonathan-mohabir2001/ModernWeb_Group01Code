@@ -14,9 +14,9 @@ block content
 
       h1#sign-up-title  Sign up below! 
 
-      if errors
-        each error in errors
-          p.alert.alert-danger(style="color:red") #{error.msg}
+      //- if errors
+      //-   each error in errors
+      //-     p.alert.alert-danger(style="color:red") #{error.msg}
       
       if DBerror
         p(style="color:red")  #{DBerror.errors.username.properties.message}
@@ -26,21 +26,33 @@ block content
         div.form-group
           label(for="name") First Name: 
           input.form-control.lg#sign-up-form-group(name="name", type="text",placeholder="First Name")
+          if(errors)
+            for error in errors 
+              if (error.param=='name')
+                p.alert.alert-danger(style="color:red") #{error.msg}
 
         .form-group-sign-up  
           label(for="email") Email: 
           input.form-control.lg#sign-up-form-group(name="email", type="text", placeholder="Email")
-
-          div
-            error.email.msg
-
+          if(errors)
+            for error in errors
+              if (error.param=='email')
+                p.alert.alert-danger(style="color:red") #{error.msg}
         div.form-group-sign-up      
           label(for="username") Username: 
           input.form-control.lg#sign-up-form-group(name="username", type="text",  aria-label="Username", placeholder="Username")
+          if(errors)
+            for error in errors 
+              if (error.param=='username')
+                p.alert.alert-danger(style="color:red") #{error.msg}
 
         div.form-group-sign-up 
           label(for="password") Password: 
           input.form-control.lg#sign-up-form-group(#sign-up-form-group  name="password", type="password", placeholder="Password")
+          if(errors)
+            for error in errors 
+              if (error.param=='password')
+                p.alert.alert-danger(style="color:red") #{error.msg}
        
         div.form-group-sign-up
           label(for="passwordConfirm") Password Confirm: 
