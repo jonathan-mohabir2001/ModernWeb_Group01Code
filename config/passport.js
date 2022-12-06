@@ -4,8 +4,8 @@ const bcryptjs = require('bcryptjs');
 const passport = require('passport');
 
 module.exports = (passport) => {
-    passport.use(new localStrategy({ usernameField: "email" }, (email, password, done) => {
-        User.findOne({ email: email }, (error, user) => {
+    passport.use(new localStrategy({ usernameField: "username" }, (username, password, done) => {
+        User.findOne({ username: username }, (error, user) => {
             if (user != null) {
                 bcryptjs.compare(password, user.password, (error, success) => {
                     if (error) {
