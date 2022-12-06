@@ -1,5 +1,4 @@
-
-
+extends layout 
 
 block content 
   html(lang="en")
@@ -7,22 +6,27 @@ block content
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title Sign-In-Page
   
-  body 
+  body#sign-in-body
 
-    h1 Sign in page below 
+    h3#sign-in-title Sign in below with your username and password created during sign up!
 
     if errors
       each error in errors
         p(style="color:red") #{error.msg}
 
-    form(method="POST", action="/signIn")
+    form(method="POST", action="/signIn")#main-sign-in-form
+
       #form-group-email.form-group
-        label(for="username") Username
-        input#email.input-control(name="username", type="text")
+        label(for="username")#username-sign-in Username
+        input#email.form-control.lg(name="username", type="text")
+    
+    
       #form-group-password.form-group
-        label(for="password") Password
-        input#password.input-control(name="password", type="password")
+        label(for="password")#sign-in-password Password
+        input#password.form-control.lg(name="password", type="password")
+    
+    
       #form-group-submit.form-group
-        input.btn.btn-primary.input-control(type="submit", value="Login")
+        input.btn.btn-primary.input-control(type="submit", value="Login")#sign-in-button
