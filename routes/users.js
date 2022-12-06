@@ -53,8 +53,7 @@ router.route('/SignIn').get((req, res, next) =>{
   res.render('signIn', )
 }).post(async(req, res, next) =>{
   console.log("signing In")
-  await check("email", "Email is required").notEmpty().run(req);
-  await check("email", "Email is invalid").isEmail().run(req);
+  await check("username", "Username is required").notEmpty().run(req);
   await check("password", "Password is required").notEmpty().run(req);
   var errors = validationResult(req);
   if (errors.isEmpty()){
@@ -65,10 +64,19 @@ router.route('/SignIn').get((req, res, next) =>{
     })(req, res, next);
   }
   else {
-    res.render('Login', { title: 'Bookstore | Login User', errors: errors.array() });
+    res.render('signIn', {errors: errors.array() });
   }
   
 });
+
+router.route('/signOut').get((req, res, next) => {
+  req.logOut((error) =>{
+    if(error){
+      return next(error)
+    }
+    res.redirect("/signIn");
+  })
+})
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
