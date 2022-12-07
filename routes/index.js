@@ -43,7 +43,7 @@ router.get('/home', function(req, res, next) {
 router.route('/addBlog').get(ensureIsLoggedIn, (req, res, next) =>{
   res.render('addBlog')
 }).post(async(req, res, next) =>{
-  console.log(JSON.stringify(res.body))
+  console.log(JSON.stringify(req.body))
   await check("title", "Title is required").notEmpty().run(req);
   await check("message", "Name is required").notEmpty().run(req);
   var errors = validationResult(req);

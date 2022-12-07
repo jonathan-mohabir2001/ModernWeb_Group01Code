@@ -25,11 +25,11 @@ block content
               form(method="POST", action="/addBlog")
                 div.form-group-title.has-clear
                   label(for="title") Blogpost title/subject
-                  input.form-control(id="title", type="text", placeholder="Enter blog title/subject")
+                  input.form-control(name="title", id="title", type="text", placeholder="Enter blog title/subject")
 
                 div.form-group-title
                   label(for="message") What's on your mind?
-                  textarea.form-control(id="message", type="text", placeholder="Express yo self", rows="5")
+                  textarea.form-control(name="message", id="message", type="text", placeholder="Express yo self", rows="5")
                   
                 div.input-group
                   div.input-group-prepend
