@@ -1,15 +1,34 @@
-extends layout 
+extends layout
+
 
 block content 
 
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Add Blog page 
-  
-  
-  body 
+  html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title Add Blog page 
+    
+    
+    body#home-body
+      div(style="background-color:skyblue").jumbotron
+        h1.display-4.d-flex.justify-content-center Welcome to blog creator!
+        p.lead.d-flex.justify-content-center Add a blog below.
+        hr.my-4
+      
+        form(method="POST", action="/index/addBlog")
+          div.form-group-title.has-clear
+            label(for="title") Blogpost title/subject
+            input.form-control(id="title", type="text", placeholder="Enter blog title/subject")
 
-    h1 Add a blog below. 
+          div.form-group-title
+            label(for="title") What's on your mind?
+            textarea.form-control(id="title", type="text", placeholder="Express yo self", rows="5")
+            
+          div.input-group
+            div.input-group-prepend
+              input.custom-file-input(type="file", id="imageUpload" ,name="myfile" multiple)
+              label.custom-file-label(for="imageUpload") Attach an image?
+          div.form-group-submit
+            input.btn.btn-primary.input-control.form-control.lg(type="submit")

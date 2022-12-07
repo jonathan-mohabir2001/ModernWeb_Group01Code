@@ -1,0 +1,153 @@
+#home-body{
+    background-color: #E2F6FB;
+    padding: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+}
+#welcome-para1{
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#welcome-para2{
+  font-size: 1.5rem;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#welcome-para3{
+  font-size: 1.5rem;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#first-para{
+    font-size: 1.5rem;
+    font-weight: 540;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#developer-para1{
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#developer-para2{
+    font-size: 1.5rem;
+    font-weight: 350;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#welcome-div{
+    background-color: skyblue;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.col-sm-6{
+    margin-top: 4rem;
+}
+#main-title{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+    background-color:skyblue;
+}
+#sign-up-button{
+    background-color: skyblue;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+#sign-in-button{
+    background-color: skyblue;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+#git-button{
+    background-color: #edf5f7;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+#sign-up-body{
+    background-color: #e6f2ff;
+    padding: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+}
+
+#sign-up-title{
+    font-size: 3rem;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 2rem;
+   ;
+}
+
+#sign-up-form-group{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 40px;
+}
+
+#sign-in-body{
+  background-color: #e6f2ff;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+}
+
+#username-sign-in {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 40px;
+}
+
+#sign-in-password{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 40px;
+}
+
+#sign-in-title{
+  font-size: 3rem;
+  font-weight: 550;
+  text-align: center;
+  margin-top: 2rem;
+}
