@@ -1,6 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
+const {check, validationResult} = require('express-validator');
+
+
+
+var Messages  = require("../schemas/message");
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
@@ -35,7 +42,33 @@ router.get('/home', function(req, res, next) {
 */
 router.route('/addBlog').get(ensureIsLoggedIn, (req, res, next) =>{
   res.render('addBlog')
-});
+}).post(async(req, res, next) =>{
+  console.log(JSON.stringify(res.body))
+  await check("title", "Title is required").notEmpty().run(req);
+  await check("message", "Name is required").notEmpty().run(req);
+  var errors = validationResult(req);
 
+  if(errors.isEmpty()){
+    let newMessage = new Messages();
+    newMessage.title = req.body.title;
+    newMessage.message = req.body.message;
+  
+    newMessage.save((error) =>{
+  
+      if(error){
+        console.log(JSON.stringify(error));
+        console.log("DB error")
+        res.render('addBlog')
+  
+      }
+      else{
+        res.redirect("/home")
+      }
+    })
+  } else{
+    console.log(errors)
+    res.render('addBlog', {errors: errors.array()})
+  }
 
+})
 module.exports = router;
