@@ -25,12 +25,16 @@ block content
       div.card-body
         h3.card-title Application Description 
         
-        p.card-text#welcome-para1 This app was created using both front-end, and backend technology. 
-        p.card-text#welcome-para2 Front end, is what you as the user are able to see, backend technology is as the name suggests backgrond processes that go on in order to make the app functional! 
-        p.card-text#welcome-para3 Our app allows you to add a blogpost, you can write whatever you feel like talking about, you will also be able to see a list of blogs submitted by other users. Follow the buttons we create to show you how to navigate this site. 
+
+        div.container.textcenter 
+          p.card-text#welcome-para1 This app was created using both front-end, and backend technology. 
+          p.card-text#welcome-para2 Front end, is what you as the user are able to see, backend technology is as the name suggests backgrond processes that go on in order to make the app functional! 
+          p.card-text#welcome-para3 Our app allows you to add a blogpost, you can write whatever you feel like talking about, you will also be able to see a list of blogs submitted by other users. Follow the buttons we create to show you how to navigate this site. 
 
 
         br
+
+      div.container.textcenter
         h5.card-title Info For Developers / Geeks 
 
         p.card-text#developer-para1 Our front end is simply created using the templating engine "pug" and bootstrap for our styling. Our backend is created using the Node.js, and Express JavaScript backend development technologies. Our data is held under a MongoDB Cluster. 
@@ -41,10 +45,12 @@ block content
       br 
       br 
       div.card-body
-        h3.card-title Follow Below    
-        p.card-text#first-para Follow the button below to first create your account in order to add your blog! 
-        a.btn.btn-primary#sign-up-button(href="/signUp") Click me to Sign Up 
-        a.btn.btn-primary#sign-in-button(href="/signIn") Click me to Sign In 
+
+        div.container.textcenter 
+          h3.card-title Follow Below    
+          p.card-text#first-para Follow the button below to first create your account in order to add your blog! 
+          a.btn.btn-primary#sign-up-button(href="/signUp") Click me to Sign Up 
+          a.btn.btn-primary#sign-in-button(href="/signIn") Click me to Sign In 
 
 
         
