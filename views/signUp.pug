@@ -19,7 +19,7 @@ block content
       //-     p.alert.alert-danger(style="color:red") #{error.msg}
       
       if DBerror
-        p(style="color:red")  #{DBerror.errors.username.properties.message}
+        p.alert.alert-danger(style="color:red") #{DBerror.errors.username.properties.message}
 
       form(method="POST", action="/signUp")#main-sign-up-form
 
