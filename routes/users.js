@@ -70,6 +70,7 @@ router.route('/SignIn').get((req, res, next) =>{
   
 });
 
+
 router.route('/signOut').get((req, res, next) => {
   req.logOut((error) =>{
     if(error){

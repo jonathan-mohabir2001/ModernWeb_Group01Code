@@ -17,18 +17,19 @@ block content
         p.lead.d-flex.justify-content-center Add a blog below.
         hr.my-4
       
-        form(method="POST", action="/addBlog")
+        form(method="POST", action="/blog/add")
           div.form-group-title.has-clear
             label(for="title") Blogpost title/subject
-            input.form-control(id="title", type="text", placeholder="Enter blog title/subject")
+            input.form-control(name="title", id="title", type="text", placeholder="Enter blog title/subject")
 
-          div.form-group-title
-            label(for="title") What's on your mind?
-            textarea.form-control(id="title", type="text", placeholder="Express yo self", rows="5")
-            
-          div.input-group
-            div.input-group-prepend
-              input.custom-file-input(type="file", id="imageUpload" ,name="myfile" multiple)
-              label.custom-file-label(for="imageUpload") Attach an image?
-          div.form-group-submit
-            input.btn.btn-primary.input-control.form-control.lg(type="submit")
+            div.form-group-title
+              label(for="message") What's on your mind?
+              textarea.form-control(name="message", id="message", type="text", placeholder="Express yo self", rows="5")
+              
+            div.input-group
+              div.input-group-prepend
+                input.custom-file-input(type="file", id="imageUpload" ,name="myfile" multiple)
+                label.custom-file-label(for="imageUpload") Attach an image?
+            div.form-group-submit
+              input.btn.btn-primary.input-control.form-control.lg(type="submit")
+            div.col-sm

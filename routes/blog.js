@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const mongoose = require("mongoose");
-const Blog = require('../schemas/blog');
-const User = require('../schemas/user');
+const Message = require('../schemas/message');
+const User = require('../schemas/users');
 const { check, validationResult } = require('express-validator');
 
 function ensureIsLoggedIn(req, res, next) {
@@ -19,13 +19,13 @@ router.route('/add')
         res.render('addBlog', {username: req.user.username});
     })
     .post(ensureIsLoggedIn, async (req, res, next) => {
-        var blog = new Blog();
+        var blog = new Message();
         await check('title', "Title is required").notEmpty().run(req);
         await check('message', "Message is required").notEmpty().run(req);
         const errors = validationResult(req);
         blog.title = req.body.title;
         blog.message = req.body.message;
-        blog.posted_by = req.user.id;
+        // blog.posted_by = req.user.id;
         if (errors.isEmpty()) {
             blog.save((error) => {
                 if (error) {
@@ -33,11 +33,12 @@ router.route('/add')
                     res.end("Error happened")
                 }
                 else {
-                    res.redirect("/blog/add");
+                    res.redirect("/");
                 }
             });
         }
         else {
+            console.log('hellow world')
             res.render("addBlog", { "errors": errors.array() })
         }
 
