@@ -58,7 +58,7 @@ router.route('/SignIn').get((req, res, next) =>{
   var errors = validationResult(req);
   if (errors.isEmpty()){
     passport.authenticate("local", {
-      successRedirect: "/addBlog",
+      successRedirect: "/blog/add",
       //SUCCESS REDIRECT - REDIRECT TO ADD A BLOG PAGE. 
       failureRedirect: "/signIn",
       failureMessage: true
