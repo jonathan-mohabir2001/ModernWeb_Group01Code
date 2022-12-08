@@ -25,6 +25,7 @@ dbconnection.on("error", () => { console.log("Failed to execute db command") });
 //START OF ROUTES 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var blogRouter = require('./routes/blog');
 //END OF ROUTES
 const app = express();
  
@@ -63,7 +64,7 @@ app.use(cookieParser());
 //START OF ROUTES. 
 app.use('/', indexRouter, usersRouter);
 app.use('/home', indexRouter);
-app.use('/addBlog', indexRouter); 
+app.use('/blog', blogRouter); 
 // END OF ROUTES.
 
 

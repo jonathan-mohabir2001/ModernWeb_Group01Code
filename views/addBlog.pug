@@ -13,11 +13,11 @@ block content
     
     body#home-body
       div(style="background-color:skyblue").jumbotron
-        h1.display-4.d-flex.justify-content-center Welcome to blog creator!
+        h1.display-4.d-flex.justify-content-center Welcome #{username} to blog creator!
         p.lead.d-flex.justify-content-center Add a blog below.
         hr.my-4
       
-        form(method="POST", action="/index/addBlog")
+        form(method="POST", action="/addBlog")
           div.form-group-title.has-clear
             label(for="title") Blogpost title/subject
             input.form-control(id="title", type="text", placeholder="Enter blog title/subject")

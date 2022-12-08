@@ -9,14 +9,7 @@ router.get('/', function(req, res, next) {
 
 //Code to ensure that we are logged in
 
-function ensureIsLoggedIn(req, res, next) {
-  if (!req.isAuthenticated()) {
-      res.redirect("/signIn");
-  }
-  else {
-      next();
-  }
-}
+
 
 /*Use this to check if we are logged in
 
@@ -33,9 +26,6 @@ router.get('/home', function(req, res, next) {
   res.render('home');
 });
 */
-router.route('/addBlog').get(ensureIsLoggedIn, (req, res, next) =>{
-  res.render('addBlog')
-});
 
 
 module.exports = router;
