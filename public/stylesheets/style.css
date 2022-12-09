@@ -131,34 +131,34 @@
 }
 #first-name-id {
   color: #f0f4fa;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 2rem;
 }
 #email-id-sign-up {
   color: #f0f4fa;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 2rem;
 }
 #username-id-sign-up {
   color: #f0f4fa;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 2rem;
 }
 #password-sign-up {
   color: #f0f4fa;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 2rem;
 }
 
-#signup-submit-button{
+#signup-submit-button {
   background-color: #bfcad6;
   color: white;
   font-size: 1.5rem;
@@ -172,7 +172,7 @@
 
 #passconfirm-sign-up {
   color: #f0f4fa;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 2rem;
@@ -193,7 +193,7 @@
 }
 
 #sign-in-password {
-  color : #f0f4fa;
+  color: #f0f4fa;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 40px;
@@ -207,51 +207,67 @@
   margin-top: 2rem;
 }
 
-#all-blogs-body{
+#all-blogs-body {
   background-color: #272d47;
   padding: 2rem;
   margin-top: 0.5rem;
   border-radius: 1rem;
 }
 
-#all-blogs-section{
+#all-blogs-section {
   background-color: #f0f0f0;
   padding: 2rem;
   margin-top: 0.5rem;
   border-radius: 1rem;
 }
 
-#all-blogs-main-title{
-  font-size: 4.0rem;
+#all-blogs-main-title {
+  font-size: 4rem;
   font-weight: 600;
   text-align: center;
   margin-top: 0.8rem;
 }
-#all-blogs-sub-title{
+#all-blogs-sub-title {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
   margin-top: 0.8rem;
 }
 
-#users-blog-title{
+#users-blog-title {
   font-size: 2.2rem;
   font-weight: 600;
   text-align: center;
   margin-top: 0.8rem;
 }
 
-
-#users-blog-post{
+#users-blog-post {
   font-size: 1.4rem;
   font-weight: 400;
   text-align: left;
   margin-top: 0.8rem;
 }
 
-#users-name{
+#users-name {
   font-size: 1.2rem;
   font-weight: 400;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+#input-blog-page {
+  background-color: #272d47;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+}
+
+#user-message-input-section {
+}
+
+#user-display-name{
+  font-size: 2.93rem;
+  font-weight: 700;
   text-align: center;
   margin-top: 0.8rem;
 }

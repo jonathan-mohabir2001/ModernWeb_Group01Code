@@ -11,15 +11,15 @@ block content
       title Add Blog page 
     
     
-    body#home-body
-      div(style="background-color:skyblue").jumbotron
-        h1.display-4.d-flex.justify-content-center Welcome #{username} to blog creator!
+    body#input-blog-page
+      div.jumbotron#user-message-input-section
+        h1#user-display-name Welcome #{username} to blog creator!
         p.lead.d-flex.justify-content-center Add a blog below.
         hr.my-4
       
         form(method="POST", action="/blog/add")
           div.form-group-title.has-clear
-            label(for="title") Blogpost title/subject
+            label(for="title")#add-blog-title-section Blogpost title/subject
             input.form-control(name="title", id="title", type="text", placeholder="Enter blog title/subject")
 
             div.form-group-title
