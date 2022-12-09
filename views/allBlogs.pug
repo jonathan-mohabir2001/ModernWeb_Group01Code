@@ -12,17 +12,17 @@ block content
     
     
     body#all-blogs-body
-      div(style="background-color:skyblue").jumbotron
-        h1.display-4.d-flex.justify-content-center Welcome To The World Of Blog!
-        p.lead.d-flex.justify-content-center View all astonishing thoughts below.
+      div.jumbotron#all-blogs-section
+        h1.display-4.d-flex.justify-content-center#all-blogs-main-title User Posts
+        p.lead.d-flex.justify-content-center#all-blogs-sub-title View all astonishing thoughts below.
         hr.my-4
 
         each blog in blogs
             div.styleEachBlog
-                h4 Title: #{blog.title}
-                p Message:  #{blog.message}
+                h4#users-blog-title Title: #{blog.title}
+                p#users-blog-post Message:  #{blog.message}
                 if blog.author 
-                  p Author: #{blog.author}
+                  p#users-name Author: #{blog.author}
                 if user 
                   if user.username == blog.author
                       a.btn.btn-primary#sign-in-button(href=`/blog/edit/${blog._id}`) Edit

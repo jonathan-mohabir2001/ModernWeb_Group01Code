@@ -207,10 +207,54 @@
   margin-top: 2rem;
 }
 
+#all-blogs-body{
+  background-color: #272d47;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+}
+
+#all-blogs-section{
+  background-color: #f0f0f0;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+}
+
+#all-blogs-main-title{
+  font-size: 4.0rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+#all-blogs-sub-title{
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+#users-blog-title{
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.8rem;
+}
 
 
+#users-blog-post{
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 0.8rem;
+}
 
-
+#users-name{
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.8rem;
+}
 .styleEachBlog {
   padding: 10px;
 }
