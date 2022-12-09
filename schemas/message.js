@@ -10,6 +10,10 @@ let messageSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    author: {
+        type: String,
+        required: true,
+    }
 })
 
 module.exports = mongoose.model("Messages", messageSchema)
