@@ -12,7 +12,7 @@ block content
 
     body#sign-up-body
 
-      h1#sign-up-title  Sign up below! 
+      h1#sign-up-title  Sign up below
 
       //- if errors
       //-   each error in errors
@@ -24,7 +24,7 @@ block content
       form(method="POST", action="/signUp")#main-sign-up-form
 
         div.form-group
-          label(for="name") First Name: 
+          label#first-name-id(for="name") First Name: 
           input.form-control.lg#sign-up-form-group(name="name", type="text",placeholder="First Name")
           if(errors)
             for error in errors 
@@ -32,14 +32,14 @@ block content
                 p.alert.alert-danger(style="color:red") #{error.msg}
 
         .form-group-sign-up  
-          label(for="email") Email: 
+          label#email-id-sign-up(for="email") Email: 
           input.form-control.lg#sign-up-form-group(name="email", type="text", placeholder="Email")
           if(errors)
             for error in errors
               if (error.param=='email')
                 p.alert.alert-danger(style="color:red") #{error.msg}
         div.form-group-sign-up      
-          label(for="username") Username: 
+          label#username-id-sign-up(for="username") Username: 
           input.form-control.lg#sign-up-form-group(name="username", type="text",  aria-label="Username", placeholder="Username")
           if(errors)
             for error in errors 
@@ -47,7 +47,7 @@ block content
                 p.alert.alert-danger(style="color:red") #{error.msg}
 
         div.form-group-sign-up 
-          label(for="password") Password: 
+          label#password-sign-up(for="password") Password: 
           input.form-control.lg#sign-up-form-group(#sign-up-form-group  name="password", type="password", placeholder="Password")
           if(errors)
             for error in errors 
@@ -55,8 +55,8 @@ block content
                 p.alert.alert-danger(style="color:red") #{error.msg}
        
         div.form-group-sign-up
-          label(for="passwordConfirm") Password Confirm: 
+          label#passconfirm-sign-up(for="passwordConfirm") Password Confirm: 
           input.form-control.lg#sign-up-form-group(name="passwordConfirm", type="password", placeholder="Password Confirm")
        
         div.form-group-submit
-          input.btn.btn-primary.input-control.form-control.lg(type="submit")
+          input.btn.btn-primary.input-control.form-control.lg#signup-submit-button(type="submit")
