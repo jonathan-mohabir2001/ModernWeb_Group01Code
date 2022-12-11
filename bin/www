@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../public/javascripts/index');
+var app = require('../public/index');
 var debug = require('debug')('group-project:server');
 var http = require('http');
 

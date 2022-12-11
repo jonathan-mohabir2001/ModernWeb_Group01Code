@@ -10,9 +10,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
-const dataBaseConfig = require('../../config/database');
+const dataBaseConfig = require('../config/database');
 const passport = require('passport');
-require('../../config/passport')(passport);
+require('../config/passport')(passport);
 const session = require('express-session');
 
 //Connecting to cloud database
@@ -26,9 +26,9 @@ dbconnection.on('error', () => {
 });
 
 //START OF ROUTES
-var indexRouter = require('../../routes/index');
-var usersRouter = require('../../routes/users');
-var blogRouter = require('../../routes/blog');
+var indexRouter = require('../routes/index');
+var usersRouter = require('../routes/users');
+var blogRouter = require('../routes/blog');
 //END OF ROUTES
 const app = express();
 
